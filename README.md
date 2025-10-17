@@ -1,61 +1,207 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# 🧾 Sistema Contable Integral de Gestión y Optimización Pública (SciGOP)
 
-## About Laravel
+> Proyecto académico desarrollado bajo el enfoque **PMP** y el patrón **MVC (Model-View-Controller)** para la sistematización de procesos contables, financieros, de nómina e inventario.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📘 Descripción General
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**SciGOP** es una aplicación web modular desarrollada en **Laravel (PHP)** con base de datos en **MySQL**, desplegable en **Azure** mediante **Docker**. Su objetivo es automatizar procesos administrativos y contables, mejorar la trazabilidad de la información y facilitar la generación de reportes financieros.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 👥 Equipo de Desarrollo
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+| Rol | Integrante |
+|------|-------------|
+| Gerente del Proyecto / Full-Stack Dev | **Nicolás López Sánchez** |
+| Full-Stack Dev | **Daniel Alejandro Albarracín Vargas** |
+| Full-Stack Dev | **Juan Sebastián Garzón Gómez** |
+| Full-Stack Dev | **Lina Mariana Pinzón Pinzón** |
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## ⚙️ Tecnologías y Herramientas
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- **Framework:** Laravel (PHP)  
+- **Base de Datos:** MySQL  
+- **Contenerización:** Docker / docker-compose  
+- **Despliegue:** Azure (Web App / Containers)  
+- **Control de Versiones:** Git / GitHub  
+- **Frontend:** Blade Templates + Bootstrap  
+- **ORM:** Eloquent  
+- **Autenticación:** Laravel Auth (roles: Administrador, Cajero, Contador)  
+- **Reportes:** Exportación a PDF (por ejemplo dompdf o equivalente)
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 🧩 Módulos Principales
 
-## Contributing
+- **Gestión de Usuarios y Roles** — Alta, edición, autenticación y permisos por rol.  
+- **Inventario** — CRUD de productos, control de stock y alertas por stock mínimo.  
+- **Compras y Proveedores** — Registro de proveedores, órdenes y facturas de compra.  
+- **Ventas y Facturación** — Procesamiento de ventas, generación de facturas y ajuste de inventario.  
+- **Contabilidad y Finanzas** — Integración de movimientos para reportes contables.  
+- **Nómina** — Cálculo y registro de pagos, deducciones e impuestos.  
+- **Reportes** — Reportes de ventas, inventario y nómina con exportación a PDF.  
+- **Configuración del Sistema** — Parámetros generales (empresa, impuestos, moneda, etc.).
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 🔄 Flujo de Uso (resumen práctico)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. **Inicio de sesión** → autenticación y redirección según rol.  
+2. **Administrar inventario** → crear/editar productos y niveles de stock.  
+3. **Registrar compras** → almacenar ordenes y facturas de proveedores.  
+4. **Procesar ventas** → registrar venta, generar factura y descontar stock.  
+5. **Generar reportes** → consolidar y exportar datos en PDF.  
+6. **Administrar nómina** → calcular y registrar pagos periódicos.  
+7. **Ajustes** → modificar configuraciones globales del sistema.
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🧠 Arquitectura y Flujo de Datos Interno
 
-## License
+Patrón MVC típico de Laravel:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```
+
+[Cliente] → [Rutas (routes/web.php)] → [Controlador] → [Modelo (Eloquent)] → [Base de datos]
+↓
+[Vistas Blade]
+
+```
+
+Ejemplo de flujo (venta):
+- Usuario envía formulario de venta → ruta `/ventas/store` → `VentaController@store` → valida datos → crea `Venta` y `DetalleVenta` → `Producto::decrement('stock', cantidad)` → genera PDF de factura y respuesta al cliente.
+
+---
+
+## 🗂️ Estructura General del Repositorio
+
+```
+
+PGCGestionDatos/
+│
+├── app/
+│   ├── Http/Controllers/        # Controladores (Auth, Inventario, Ventas, Compras, Reportes, Nomina, Config)
+│   ├── Models/                  # Modelos Eloquent (User, Producto, Venta, Compra, Nomina, Proveedor)
+│   └── ...
+│
+├── database/
+│   ├── migrations/              # Migraciones MySQL
+│   └── seeders/                 # Seeders con datos iniciales
+│
+├── resources/
+│   ├── views/                   # Blade templates
+│   ├── js/
+│   └── css/
+│
+├── routes/
+│   └── web.php
+│
+├── docker-compose.yml
+├── .env.example
+├── composer.json
+└── README.md
+
+````
+
+---
+
+## 🚀 Instalación y Ejecución Local
+
+### Requisitos Previos
+- PHP ≥ 8.1  
+- Composer  
+- MySQL ≥ 8.0  
+- Docker (opcional)
+
+### Pasos rápidos
+
+```bash
+# Clonar repositorio
+git clone https://github.com/lopezns/SciGOP.git
+cd SciGOP
+
+# Dependencias PHP
+composer install
+
+# Variables de entorno
+cp .env.example .env
+php artisan key:generate
+# Configurar .env con credenciales de DB
+
+# Migraciones y seeders
+php artisan migrate --seed
+
+# Ejecutar en local
+php artisan serve
+# Acceder en http://127.0.0.1:8000
+````
+
+### Ejecutar con Docker
+
+```bash
+docker-compose up -d
+# Revisar logs y servicios (DB, app, etc.)
+```
+
+---
+
+## ✅ Pruebas
+
+Ejecutar pruebas unitarias e integración básicas:
+
+```bash
+php artisan test
+```
+
+Criterios sugeridos de aceptación:
+
+* Generación correcta de reportes PDF.
+* Funcionalidad de ventas y ajuste de inventario.
+* Autenticación y control por roles funcionando.
+
+---
+
+## 🔐 Seguridad y Buenas Prácticas
+
+* No almacenar claves en texto plano: usar `.env`.
+* Validaciones server-side en controladores y reglas de Request.
+* Uso de prepared statements y Eloquent para evitar inyección SQL.
+* Control de acceso por middleware y roles.
+* Contenerizar para entornos reproducibles.
+
+---
+
+## 📦 Despliegue
+
+* Construir imagen Docker y desplegar en Azure Web App for Containers o en un servicio de contenedores.
+* Configurar variables de entorno en el servicio de despliegue.
+* Ejecutar migraciones en entorno de producción con respaldo previo.
+
+---
+
+## 🔧 Mantenimiento y Contribución
+
+1. Crear una rama feature/xxx para desarrollos.
+2. Hacer PR hacia `develop` con descripción y pruebas.
+3. Revisar y aprobar antes de merge a `main`.
+4. Actualizar documentación y migraciones si aplica.
+
+---
+
+## 🧾 Licencia
+
+Proyecto académico — uso y reproducción con fines educativos y citando autores.
+
+---
+
+## 💬 Contacto
+
+**Nicolás López Sánchez** — Gerente del Proyecto
+GitHub: [https://github.com/lopezns](https://github.com/lopezns)
+
+
